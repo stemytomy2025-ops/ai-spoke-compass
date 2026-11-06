@@ -1,0 +1,19 @@
+{
+  "project": "AI Spoke Compass",
+  "generated_at": "2026-11-05T23:56:08.632163+00:00",
+  "note": "SHA-256 of each dataset as inspected before the app was built. The app re-downloads the data at startup; the live files may differ if Statistics Norway updates the tables.",
+  "datasets": {
+    "ssb-14944-ai-obstacles": {
+      "name": "Statistics Norway table 14944: Obstacles to enterprise AI use by industry and size (2026)",
+      "source": "https://www.ssb.no/en/statbank/table/14944",
+      "license": "CC-BY-4.0",
+      "inspected_sha256": "9d346f12d314db035d609b4eb24fc087a57b443c1afd69278ff12c08fd006eb5"
+    },
+    "ssb-14365-genai-use": {
+      "name": "Statistics Norway table 14365: Use of generative AI by sex and age (2024-2026)",
+      "source": "https://www.ssb.no/en/statbank/table/14365",
+      "license": "CC-BY-4.0",
+      "inspected_sha256": "9aac73c429ac5c51de646dc4e6337e526916a008bc33f66b2167bccb32817fb9"
+    }
+  }
+}

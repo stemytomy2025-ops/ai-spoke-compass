@@ -1,0 +1,101 @@
+{
+  "cases": [
+    {
+      "id": "rank_ai_obstacles-top",
+      "question": "What is the most cited obstacle to AI use among Norwegian enterprises with 100 or more employees?",
+      "tool": "rank_ai_obstacles",
+      "args": {
+        "metric": "2026",
+        "agg": "mean",
+        "filters": {
+          "industry (SIC2025)": "_T Total",
+          "employed persons": "100 employed or more"
+        }
+      },
+      "expect": {
+        "kind": "top_group",
+        "value": "Lack of relevant expertise"
+      }
+    },
+    {
+      "id": "obstacle_by_company_size-top",
+      "question": "Which enterprise size class most often cites data protection and privacy concerns as an obstacle to AI?",
+      "tool": "obstacle_by_company_size",
+      "args": {
+        "metric": "2026",
+        "agg": "mean",
+        "filters": {
+          "contents": "Concerns regarding violation of data protection and privacy",
+          "industry (SIC2025)": "_T Total"
+        }
+      },
+      "expect": {
+        "kind": "top_group",
+        "value": "100 employed or more"
+      }
+    },
+    {
+      "id": "obstacle_by_industry-top",
+      "question": "In which industry do enterprises most often cite lack of relevant expertise as an obstacle to AI?",
+      "tool": "obstacle_by_industry",
+      "args": {
+        "metric": "2026",
+        "agg": "mean",
+        "filters": {
+          "contents": "Lack of relevant expertise",
+          "employed persons": "Total"
+        }
+      },
+      "expect": {
+        "kind": "top_group",
+        "value": "10-39 Manufacturing, electricity supply, water supply, sewerage, waste management and remediation activities"
+      }
+    },
+    {
+      "id": "genai_work_use_by_year-top",
+      "question": "In which year was work use of generative AI highest among 45-54 year olds?",
+      "tool": "genai_work_use_by_year",
+      "args": {
+        "metric": "Used generative AI tools for professional (work) purposes",
+        "agg": "mean",
+        "filters": {
+          "sex": "Both sexes",
+          "age": "45-54 years"
+        }
+      },
+      "expect": {
+        "kind": "top_group",
+        "value": 2026
+      }
+    },
+    {
+      "id": "genai_use_by_age-top",
+      "question": "Which age group used generative AI for work most in 2026?",
+      "tool": "genai_use_by_age",
+      "args": {
+        "metric": "Used generative AI tools for professional (work) purposes",
+        "agg": "mean",
+        "filters": {
+          "year": 2026,
+          "sex": "Both sexes"
+        }
+      },
+      "expect": {
+        "kind": "top_group",
+        "value": "45-54 years"
+      }
+    }
+  ],
+  "pinned": {
+    "at": "2026-11-06T11:22:25.846149+00:00",
+    "by": "scripts/pin_expectations.py (pyarrow + plain Python, independent of the tools)",
+    "source_sha256": {
+      "ssb-14944-ai-obstacles": [
+        "9d346f12d314db035d609b4eb24fc087a57b443c1afd69278ff12c08fd006eb5"
+      ],
+      "ssb-14365-genai-use": [
+        "9aac73c429ac5c51de646dc4e6337e526916a008bc33f66b2167bccb32817fb9"
+      ]
+    }
+  }
+}
